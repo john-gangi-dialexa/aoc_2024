@@ -30,7 +30,7 @@ bool is_safe_row(int *row, int length) {
 int main() {
     int good = 0;
 
-    FILE *file = fopen("unusual_data", "r");
+    FILE *file = fopen("inputs/unusual_data", "r");
     if (file == NULL) {
         perror("Error opening file");
         return EXIT_FAILURE;

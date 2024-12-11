@@ -7,7 +7,7 @@ int compare(const void *a, const void *b) {
 }
 
 int main() {
-    FILE *file = fopen("lists", "r");
+    FILE *file = fopen("inputs/lists", "r");
     if (file == NULL) {
         perror("Error opening file");
         return EXIT_FAILURE;
