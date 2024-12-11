@@ -38,6 +38,9 @@ int main() {
     int total = 0;
     printf("Matching pattern: %s\n", pattern);
     while (regexec(&regex, cursor, 3, matches, 0) == 0) {
+        // This loop will continue to execute as long as the regex pattern matches a substring in the cursor position.
+        // The regexec function returns 0 if a match is found, and non-zero if no match is found.
+        // The matches array will contain the positions of the matched substrings.
         printf("Match found at position: %ld\n", cursor - data);
         if (matches[1].rm_so != -1 && matches[2].rm_so != -1) {
             // Extract and print the matched numbers
